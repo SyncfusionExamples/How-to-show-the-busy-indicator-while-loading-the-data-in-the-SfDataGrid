@@ -12,7 +12,6 @@ You can show an indication of the data loading with the help of the  [BusyIndica
 
 Here, the BusyIndicator is stopped after the [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_ItemsSource) is changed by handling the `ItemsSourceChanged` event.
 
-**C#**
  
  ```csharp
 SfdataGrid.Loaded += SfdataGrid_Loaded;
