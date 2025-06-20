@@ -1,0 +1,39 @@
+﻿<Window x:Class="SfDataGridDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:local="clr-namespace:SfDataGridDemo"
+        Title="SfDataGrid Demo"
+        Width="1024"
+        Height="710"
+        Icon="App.ico"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <local:ViewModel />
+    </Window.DataContext>
+
+    <Grid>
+        <Syncfusion:SfBusyIndicator Name="sfBusyIndicator"
+                                    Margin="5"
+                                    VerticalAlignment="Center"
+                                    AnimationType="Gear"
+                                    IsBusy="True" />
+        <Syncfusion:SfDataGrid x:Name="SfdataGrid"
+                               AllowDrop="True"
+                               AllowEditing="True"
+                               AllowFiltering="True"
+                               AllowSorting="True"
+                               AutoGenerateColumns="False"
+                               ColumnSizer="Star"
+                               NavigationMode="Cell">
+            <Syncfusion:SfDataGrid.Columns>
+                <Syncfusion:GridTextColumn MappingName="EmployeeName" />
+                <Syncfusion:GridTextColumn MappingName="EmployeeDesignation" />
+                <Syncfusion:GridNumericColumn MappingName="EmployeeSalary" />
+                <Syncfusion:GridTextColumn MappingName="EmployeeArea" ShowToolTip="True" />
+                <Syncfusion:GridTextColumn MappingName="EmployeeGender" />
+            </Syncfusion:SfDataGrid.Columns>
+        </Syncfusion:SfDataGrid>
+    </Grid>
+</Window>
